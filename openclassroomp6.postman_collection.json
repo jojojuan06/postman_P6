@@ -1,0 +1,150 @@
+{
+	"info": {
+		"_postman_id": "3217ee43-3cf9-42ce-b5e6-41bd6a73b988",
+		"name": "openclassroomp6",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "like sauce",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjMwN2NlMDJlYWFhZWQ0NTliNmMwN2UiLCJpYXQiOjE2NDc0NTUyOTQsImV4cCI6MTY0NzU0MTY5NH0.-BLQ2TCKT9Aw1nqS84J9B2N9_cl9sHb5_SRAIxAeUyo",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{userId: \"622f17be8689a60cebf2c290\", like: 1}\r\n",
+					"options": {
+						"raw": {
+							"language": "javascript"
+						}
+					}
+				},
+				"url": "http://localhost:3000/api/sauces/622f50dfff80c9c229fedbfd/like"
+			},
+			"response": []
+		},
+		{
+			"name": "createSauce",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "http://localhost:3000/api/sauces/622f1cac797b06437352ba05/"
+			},
+			"response": []
+		},
+		{
+			"name": "getOneSauce",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/sauces/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"sauces",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "62323cf9685f8d027ae30bb7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllSauce",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/api/sauces/622f1cac797b06437352ba05/"
+			},
+			"response": []
+		},
+		{
+			"name": "modifySauce",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"_id\": \"62323cf9685f8d027ae30bb7\",\r\n    \"userId\": \"62307d222eaaaed459b6c086\",\r\n    \"name\": \"sauce piment!\",\r\n    \"manufacturer\": \"made in france\",\r\n    \"description\": \"coucou ptiflo\",\r\n    \"mainPepper\": \"tomate poivron\",\r\n    \"imageUrl\": \"http://localhost:3000/images/istockphoto-1141051429-612x612.jpg1647459577189.jpg\",\r\n    \"heat\": 9,\r\n    \"usersLiked\": [],\r\n    \"usersDisliked\": [],\r\n    \"__v\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/sauces/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"sauces",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "62323cf9685f8d027ae30bb7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteSauce",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:3000/api/sauces/62323cf9685f8d027ae30bb7"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": {
+			"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjMwN2QyMjJlYWFhZWQ0NTliNmMwODYiLCJpYXQiOjE2NDc0NTk2NzYsImV4cCI6MTY0NzU0NjA3Nn0.Z57CG9e7Vm7M0S1iwgwMATEiygfyGSUxtQiCQU3wjZk"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
